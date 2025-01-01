@@ -3,27 +3,27 @@
 #include <ctype.h>
 #include <string.h>
 
-// Prototipler
+
 int only_digits(char *str);
 char rotate(char c, int key);
 
 int main(int argc, char *argv[])
 {
-    // Komut satırı argüman sayısını kontrol et
+    
     if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
 
-    // Anahtarın sadece rakamlardan oluşup oluşmadığını kontrol et
+    
     if (!only_digits(argv[1]))
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
 
-    // Anahtarı tam sayıya çevir ve 26 ile sınırla
+    
     int key = atoi(argv[1]) % 26;
 
     // Düz metin girişi
@@ -51,10 +51,10 @@ int only_digits(char *str)
     {
         if (!isdigit(str[i]))
         {
-            return 0; // false
+            return 0; 
         }
     }
-    return 1; // true
+    return 1; 
 }
 
 
